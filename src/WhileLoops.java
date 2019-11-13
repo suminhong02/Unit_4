@@ -29,26 +29,50 @@ public class WhileLoops {
     }
 
     public static String countPosAndNeg(){
+
+        int posCount = 0;
+        int negCount = 0;
         System.out.println("Enter a positive or negative number or 0 to quit:");
-        int positive = 0;
-        int negative = 0;
         int input = scan.nextInt();
+
         while(input != 0){
+
             if(input>0){
-                positive += 1;
+                posCount += 1;
             }
             if(input<0){
-                negative += 1;
+                negCount += 1;
             }
+
+        input = scan.nextInt();
         }
-        return "There were " + positive + "positive and "+ negative + "negative numbers.";
+        return "There were " + posCount + " positive and "+ negCount + " negative numbers.";
     }
 
+    public static String findMinAndMax(){
+
+        int counter = 0;
+        int min = Integer.MIN_VALUE;
+        int max = Integer.MAX_VALUE;
+        while(counter<5){
+            System.out.println("Number: ");
+            int num = scan.nextInt();
+            counter += 1;
+            if(num<min){
+                min = num;
+            }
+            if(num>max){
+                max = num;
+            }
+        }
+        return "Max value is: " + max +"\n Min value is: " + min;
+    }
 
     public static void main(String[] args){
-        System.out.println(fromHereToThere(7,10));
-        System.out.println(factors(6));
-        System.out.println(countPosAndNeg());
+        //System.out.println(fromHereToThere(7,10));
+        //System.out.println(factors(6));
+        //System.out.println(countPosAndNeg());
+        System.out.println(findMinAndMax());
 
 
     }
