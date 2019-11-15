@@ -52,27 +52,59 @@ public class WhileLoops {
     public static String findMinAndMax(){
 
         int counter = 0;
-        int min = Integer.MIN_VALUE;
-        int max = Integer.MAX_VALUE;
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
         while(counter<5){
-            System.out.println("Number: ");
+            System.out.print("Number: ");
             int num = scan.nextInt();
             counter += 1;
             if(num<min){
-                min = num;
+                min=num;
             }
             if(num>max){
-                max = num;
+                max=num;
             }
         }
-        return "Max value is: " + max +"\n Min value is: " + min;
+        return "Max value is: " + max +"\nMin value is: " + min;
+    }
+
+    public static String gradePoint() {
+
+        int counter = 0;
+        double total = 0;
+
+        while (counter < 7) {
+            System.out.println("Enter seven letter grades (A, B, C, D, or F)");
+            String grade = scan.nextLine();
+            counter += 1;
+            if (grade.equals("A")) {
+                total += 4.0;
+            } else if (grade.equals("B")) {
+                total += 3.0;
+            } else if (grade.equals("C")) {
+                total += 2.0;
+            } else if (grade.equals("D")) {
+                total += 1.0;
+            } else {
+                total += 0.0;
+            }
+
+        }
+        total /= 7;
+        total *=100;
+        total = (int)(total+0.5);
+        total /= 100;
+
+        return "GPA = " + total;
+
     }
 
     public static void main(String[] args){
         //System.out.println(fromHereToThere(7,10));
         //System.out.println(factors(6));
         //System.out.println(countPosAndNeg());
-        System.out.println(findMinAndMax());
+        //System.out.println(findMinAndMax());
+        System.out.println(gradePoint());
 
 
     }
