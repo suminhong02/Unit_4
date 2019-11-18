@@ -6,10 +6,9 @@ public class WhileLoops {
 
     public static String fromHereToThere(int a, int b){
         String value = "";
+        if (a>b){
+            return "Invalid input";}
         while(a <= b){
-            if (a>b){
-                return "Invalid input";
-            }
             value += a+" ";
            a += 1;
         }
@@ -25,7 +24,7 @@ public class WhileLoops {
             }
             num += 1;
             }
-        return value;
+        return "The factors of " + a + " are: " + value;
     }
 
     public static String countPosAndNeg(){
@@ -68,7 +67,7 @@ public class WhileLoops {
         return "Max value is: " + max +"\nMin value is: " + min;
     }
 
-    public static String gradePoint() {
+    public static double gradePoint() {
 
         int counter = 0;
         double total = 0;
@@ -95,7 +94,7 @@ public class WhileLoops {
         total = (int)(total+0.5);
         total /= 100;
 
-        return "GPA = " + total;
+        return total;
 
     }
 
