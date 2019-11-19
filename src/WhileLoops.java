@@ -71,10 +71,10 @@ public class WhileLoops {
 
         int counter = 0;
         double total = 0;
-
+        System.out.println("Enter seven letter grades (A, B, C, D, or F)");
         while (counter < 7) {
-            System.out.println("Enter seven letter grades (A, B, C, D, or F)");
-            String grade = scan.nextLine();
+
+            String grade = scan.next();
             counter += 1;
             if (grade.equals("A")) {
                 total += 4.0;
@@ -102,8 +102,8 @@ public class WhileLoops {
         //System.out.println(fromHereToThere(7,10));
         //System.out.println(factors(6));
         //System.out.println(countPosAndNeg());
-        //System.out.println(findMinAndMax());
-        System.out.println(gradePoint());
+        System.out.println(findMinAndMax());
+        //System.out.println(gradePoint());
 
 
     }
