@@ -25,11 +25,9 @@ public class Piglet {
                 }
             }
         }
-
     }
     public static void main(String []args){
         System.out.println("Welcome to Piglet!");
         System.out.println(rollDice());
     }
-
 }
