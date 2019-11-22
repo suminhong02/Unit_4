@@ -22,7 +22,7 @@ public class ForLoops {
     public static String countDown2(int a, int b) {
         int startingPoint;
         int endPoint;
-        String blank = " ";
+        String blank = "";
         if (a > b) {
             startingPoint = a;
             endPoint = b;
@@ -30,10 +30,28 @@ public class ForLoops {
             startingPoint = b;
             endPoint = a;
         }
-        for (int i = startingPoint; i > endPoint; i--) {
+        for (int i = startingPoint; i >= endPoint; i--) {
             blank += i + " ";
         }
         return blank;
+    }
+
+    public static int sumNumbers(int a, int b){
+        int total = 0;
+        int larger;
+        int smaller;
+        if ( a > b) {
+            larger = a;
+            smaller = b;
+        }
+        else{
+            larger = b;
+            smaller = a;
+        }
+        for (int i = smaller; i <= larger; i++){
+            total += i;
+        }
+        return total;
     }
 
 
@@ -41,5 +59,6 @@ public class ForLoops {
         //System.out.println(printingHashTags(7));
         //System.out.println(countDown(0,10));
         //System.out.println(countDown2(10,0));
+        //System.out.println(sumNumbers(10,5));
     }
 }
