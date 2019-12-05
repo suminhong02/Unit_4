@@ -34,7 +34,7 @@ public class StringProblems {
         String t2 = s2;
         int i = 0;
         if (s1.equals(s2)){
-            return s1+" and "+s2+ " are the same.";
+            return s1+" and "+s2+ " are the same";
         }
         if (s1.length()>s2.length()){
             t2+=" ";
@@ -45,13 +45,21 @@ public class StringProblems {
         while(t1.substring(i, i+1).equals (t2.substring(i, i+1))){
             i++;
         }
-        return s1+" and "+s2+" are not the same. They differ at number "+(i+1)+".";
+        return s1+" and "+s2+" are not the same. They differ at letter number "+(i+1);
     }
 
     public static boolean isPalindrome(String S){
         String s = "";
-        int i = 0;
-        if ()
+        String t = S.toLowerCase();
+        for(int i = S.length()-1; i >= 0; i--){
+            s += t.substring(i,i+1);
+        }
+        if(t.equals(s)){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     public static void main(String []args){
@@ -59,5 +67,6 @@ public class StringProblems {
         //System.out.println(everyOtherLetter("Computer Science"));
         //System.out.println(countTheVowels("COMPUTER science"));
         //System.out.println(differentStrings("tiger", "tiger"));
+        System.out.println(isPalindrome("rAcECaR"));
     }
 }
