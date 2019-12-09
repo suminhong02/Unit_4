@@ -67,6 +67,6 @@ public class StringProblems {
         //System.out.println(everyOtherLetter("Computer Science"));
         //System.out.println(countTheVowels("COMPUTER science"));
         //System.out.println(differentStrings("tiger", "tiger"));
-        System.out.println(isPalindrome("rAcECaR"));
+        //System.out.println(isPalindrome("rAcECaR"));
     }
 }
