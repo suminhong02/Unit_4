@@ -5,15 +5,19 @@ public class FizzBuzz {
         for(int i = 1; i<=num; i++){
 
             if(i%3 == 0 && i%5 == 0 && i>=15){
-                outcome += " FizzBuzz";
+                outcome += "FizzBuzz ";
             }
             else if(i>=5 && i%5 == 0){
-                outcome += "Buzz";
+                outcome += "Buzz ";
             }
             else if(i>=3 && i%3 == 0){
-                outcome += "fizz";
+                outcome += "Fizz ";
             }
-            else outcome += i;
+            else outcome += i+" ";
+
+            if(i%20 == 0){
+                outcome += "\n";
+            }
         }
         return outcome;
     }
